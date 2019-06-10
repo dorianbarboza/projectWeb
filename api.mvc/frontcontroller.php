@@ -6,8 +6,7 @@
  * Time: 12:54
  */
 
-require 'controladores/solicitud.php';
-require 'controladores/usuario.php';
+require 'controladores/Usuario.php';
 require 'controladores/Repartidor.php';
 require 'controladores/VehiculoRepartidor.php';
 //require 'controladores/hugo.php';
@@ -46,7 +45,7 @@ $recurso = array_shift($peticion);//
 
 //echo $recurso;
 
-$recursos_existentes = array('contacto', 'usuario','Repartidor','VehiculoRepartidor','solicitud', 'actualizar'); //Se ponen en singular
+$recursos_existentes = array('contacto', 'usuario','Repartidor','VehiculoRepartidor','Usuario','solicitud', 'actualizar'); //Se ponen en singular
 
 
 // Comprobar si existe el recurso
