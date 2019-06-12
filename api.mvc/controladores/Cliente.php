@@ -37,6 +37,10 @@
                       return $this->clienteModel->agregarCliente($array);
                       break;
 
+                      case 'actualizarCliente':
+                      return $this->clienteModel->actualizarCliente($array);
+                      break;
+
 
                       default:
                       echo 'Error';

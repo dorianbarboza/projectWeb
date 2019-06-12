@@ -54,6 +54,36 @@
                 }
         }
 
+        function actualizarCliente($array){
+          if(!empty($array)){
+            $consulta = "UPDATE Cliente
+            SET Cliente.Username = '$array->Username',
+                Cliente.Password = '$array->Password',
+                Cliente.Correo = '$array->Correo',
+                Cliente.Telefono = '$array->Telefono',
+                Cliente.Nombre = '$array->Nombre',
+                Cliente.Apellidos = '$array->Apellidos',
+                Cliente.FechaNacimiento = '$array->FechaNacimiento',
+                Cliente.Ciudad = '$array->Ciudad',
+                Cliente.Sexo = '$array->Sexo'
+            WHERE  Cliente.ID_Cliente = $array->ID_Cliente";
+          }
+
+          //echo $consulta;
+          $this->query = $consulta;
+          // Ejecutar sentencia preparada
+          $result = $this->execute_single_query();
+          if ($result['mensaje'] == "Registrado"){
+            return [
+              "datos" =>"Registro actualizado"
+            ];
+          }else{
+            return [
+              "error"=>"Error en el JSON2"
+            ];
+          }
+        }
+
 
 
     }

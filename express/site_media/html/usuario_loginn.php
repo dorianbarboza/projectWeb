@@ -2,7 +2,7 @@
 	session_start();
 	include 'Conexion.php';
 	if(isset($_SESSION['Username'])){
-	echo '<script> window.location="../principal/"; </script>';
+	echo '<script> window.location="../home/"; </script>';
 	}
 ?>
 <!doctype html>

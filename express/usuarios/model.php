@@ -90,11 +90,15 @@ class Usuario extends DBAbstractModel {
 
         $json = json_encode (
             array(
-                'idUsuario'=> $user_data['idUsuario'],
-                'nombre' => $user_data['nombre'],
-                'correo' => $user_data['correo'],
-                'sexo' => $user_data['sexo'],
-                'fechaNacimiento' => $user_data['fechaNacimiento']
+                'ID_Cliente'=> $user_data['ID_Cliente'],
+                'Username' => $user_data['Username'],
+                'Password' => $user_data['Password'],
+                'Correo' => $user_data['Correo'],
+                'Telefono' => $user_data['Telefono'],
+                'Nombre' => $user_data['Apellidos'],
+                'FechaNacimiento' => $user_data['FechaNacimiento'],
+                'Ciudad' => $user_data['Ciudad'],
+                'Sexo' => $user_data['Sexo']
             )
          );
 
@@ -107,7 +111,7 @@ class Usuario extends DBAbstractModel {
             )
             );
 
-        $url = "http://localhost/api.peopleapp.com/api.mvc/usuario/actualizarUsuario/";
+        $url = "http://localhost/projectWeb/api.mvc/Cliente/actualizarCliente";
 
 
         $context=stream_context_create($opciones);

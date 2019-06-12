@@ -7,7 +7,7 @@
     <title>Document</title>
 
 
-    
+
 <style>
             .centro{
                 text-align: center;
@@ -16,7 +16,7 @@
             .general{
             width: 500px;
             height: 500px;
-            
+
             margin: auto;
             padding: 30px;
             }
@@ -32,7 +32,7 @@
                 font-size:16px;
                 padding:0 10px;
                 background:#fff;
-            
+
                 box-shadow: 0 1px 5px rgba(4, 129, 177, 0.5);
                 padding:5px 10px;
                 text-transform:uppercase;
@@ -41,7 +41,7 @@
             }
             fieldset {
                 border-radius:4px;
-            
+
                 padding:20px;
                 border-color:rgba(4, 129, 177, 0.4);
             }
@@ -49,7 +49,7 @@
             textarea {
                 color: #373737;
                 background: #fff;
-            
+
                 font-size: 14px;
                 line-height: 1.2em;
                 margin-bottom:15px;
@@ -98,55 +98,52 @@
 </head>
 <body>
     <div class = "general">
-        <form name="nombre_formulario" method="POST" action="/api.peopleapp.com/express/usuarios/edit/">
-            
+        <form name="nombre_formulario" method="POST" action="/projectWeb/express/usuarios/edit/">
+
             <fieldset>
                     <div>
-                        <input type="text" name="idUsuario" autocomplete="off" placeholder="Id usuario"/>
-                    </div> 
-                    <div>
-                        <input type="text" name="nombre"  autocomplete="off" placeholder="Nombre"/>
+                        <input type="text" name="ID_Cliente" autocomplete="off" placeholder="ID"/>
                     </div>
-                
                     <div>
-                        <input type="email" name="correo" autocomplete="off" placeholder="Correo"/>
+                        <input type="text" name="Correo"  autocomplete="off" placeholder="Correo"/>
                     </div>
-                    
 
                     <div>
-                        <input type="text" name="sexo" autocomplete="off" placeholder="Sexo"/>
+                        <input type="text" name="Telefono" autocomplete="off" placeholder="Telefono"/>
                     </div>
-                    
+
+
                     <div>
-                        <input type="text" name="fechaNacimiento" placeholder="Fecha de nacimiento"/>
+                        <input type="text" name="Nombre" autocomplete="off" placeholder="Nombre"/>
                     </div>
-                    
+
+                    <div>
+                        <input type="text" name="Apellidos" placeholder="Apellidos"/>
+                    </div>
+
+                    <div>
+                        <input type="text" name="FechaNacimiento" placeholder="Fecha Nacimiento"/>
+                    </div>
+
+                    <div>
+                        <input type="text" name="Ciudad" placeholder="Ciudad"/>
+                    </div>
+
+                    <div>
+                        <input type="text" name="Sexo" placeholder="Sexo"/>
+                    </div>
+
 
                     <input type="submit" name="submit" value="Guardar"/>
-                </fieldset>  
+                </fieldset>
 
-                <!-- <?php 
+                <!-- <?php
                     $url='http://localhost/api.peopleapp.com/api.mvc/usuario/actualizarUsuario/';
                     $data=file_get_contents($url);
-                    $prueba = json_decode($data);      
+                    $prueba = json_decode($data);
                 ?>
          -->
-        </form> 
-    </div>   
+        </form>
+    </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

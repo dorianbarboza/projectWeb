@@ -24,6 +24,7 @@
     const FORMULARIO_ELIMINAR = "eliminar";
     const FORMULARIO_LOGINN = "loginn";
     const VIEW_HOME = "home";
+    const VIEW_PERFIL = "perfil";
 
 
 

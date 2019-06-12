@@ -20,7 +20,7 @@
 				 	$row = mysqli_fetch_array($log);
 					$_SESSION["Username"] = $row['Username'];
 
-					header("Location:../principal/");
+					header("Location:../home/");
 
 				}
 				else{
