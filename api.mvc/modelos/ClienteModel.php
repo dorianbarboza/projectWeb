@@ -21,6 +21,39 @@
             }
         }
 
+        // POST INSERT
+
+            function agregarCliente($array){
+                if(!empty($array)){
+                    $consulta = "INSERT INTO `Cliente` (`Username`, `Password`, `Correo`,`Telefono`, `Nombre`,`Apellidos`,`FechaNacimiento`,`Ciudad`,`Sexo`)
+                     VALUES (
+                         '$array->Username',
+                          '$array->Password',
+                          '$array->Correo',
+                          '$array->Telefono',
+                          '$array->Nombre',
+                          '$array->Apellidos',
+                          '$array->FechaNacimiento',
+                          '$array->Ciudad',
+                          '$array->Sexo');";
+
+
+                }
+                $this->query = $consulta;
+                // Ejecutar sentencia preparada
+                $result = $this->execute_single_query();
+                    if ($result['mensaje'] == "Registrado"){
+                        return [
+                            "datos" =>"Se ha registrado al repartidor"
+                        ];
+
+                }else{
+                    return [
+                        "error"=>"Error en el JSON"
+                    ];
+                }
+        }
+
 
 
     }
