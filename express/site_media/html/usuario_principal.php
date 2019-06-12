@@ -4,8 +4,8 @@
     <?php
         session_start();
         include 'Conexion.php';
-       
-        if(isset($_SESSION['nombre'])) {?>
+
+        if(isset($_SESSION['Username'])) {?>
 
 <!DOCTYPE html>
 <html>
@@ -90,7 +90,7 @@ header{
             width: 850px;
             text-align: center;
             margin: 40px auto;
-            
+
         }
 
         table{
@@ -98,7 +98,7 @@ header{
         }
 
         .centro{
-            text-align: center; 
+            text-align: center;
         }
           /* .tabla{
             width: 850px;
@@ -113,9 +113,9 @@ header{
         #button {
         padding: 0;
         padding-left: 250px;
-        
+
          }
-     
+
         #button li {
             display: inline;
             }
@@ -132,7 +132,7 @@ header{
             text-align: center;
             }
 
-    
+
         .centrado{
             text-align: center;
         }
@@ -143,7 +143,7 @@ header{
     </style>
   </head>
   <body>
-      
+
   <nav class="navegacion">
 			<ul class="menu">
 				<li><a href="#">Inicio</a></li>
@@ -163,7 +163,7 @@ header{
 			</ul>
 		</nav>
 
-      
+
         <!-- <ul id="button">
             <li><a href="">Inicio</a></li>
             <li><a href="../formulario/">Nuevo usuario</a></li>
@@ -171,20 +171,20 @@ header{
             <li><a href="../eliminar/">Eliminar</a></li>
             <li><a href="../../../reportes/ex.php/">Reportes</a></li>
         </ul> -->
-        
+
        <div class = "admin">
         <?php
-            echo "Administrador: " .$_SESSION['nombre'] . "<p/>";
-            ?> 
-            <a href="../cerrarsesion/"><button>Salir</button></a> 
+            echo "Administrador: " .$_SESSION['Username'] . "<p/>";
+            ?>
+            <a href="../cerrarsesion/"><button>Salir</button></a>
        </div>
-          
-          
+
+
           <h1 style = "text-align: center">Servicio Express</h1>
             <br>
           <h3 style = "text-align: center">Usuarios Registrados</h3>
-         
-         
+
+
 
       <div class = "tabla">
         <table>
@@ -195,26 +195,26 @@ header{
                 <th>Sexo</th>
                 <th>Fecha de nacimiento</th>
             </tr>
-            <?php 
+            <?php
             $url='http://localhost/api.peopleapp.com/api.mvc/solicitud/obtenerUsuarios/';
             $data=file_get_contents($url);
-            $prueba = json_decode($data);      
+            $prueba = json_decode($data);
             ?>
 
-            <?php foreach($prueba->datos as $dato) : ?> 
+            <?php foreach($prueba->datos as $dato) : ?>
             <tr>
-                <td><?php echo ($dato->idUsuario);?></td> 
+                <td><?php echo ($dato->idUsuario);?></td>
                 <td><?php echo ($dato->nombre);?></td>
-                <td><?php echo ($dato->correo);?></td>  
-                <td><?php echo ($dato->sexo);?></td>   
-                <td><?php echo ($dato->fechaNacimiento);?></td> 
-                  
+                <td><?php echo ($dato->correo);?></td>
+                <td><?php echo ($dato->sexo);?></td>
+                <td><?php echo ($dato->fechaNacimiento);?></td>
+
             </tr>
-            <?php endforeach;?>  
+            <?php endforeach;?>
         </table>
       </div>
-    
-    
+
+
   </body>
 </html>
 <?php

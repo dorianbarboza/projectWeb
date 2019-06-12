@@ -1,5 +1,5 @@
 <?php
-	session_start(); 
+	session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,11 +15,11 @@
 			if(isset($_POST['login'])){
 				$user = $_POST['user'];
 				$pass = $_POST['pw'];
-				$log = $conect ->query("SELECT * FROM administrador WHERE nombre='$user' AND contrasena='$pass'");
+				$log = $conect ->query("SELECT * FROM Cliente WHERE Username='$user' AND Password='$pass'");
 				 if (mysqli_num_rows($log)>0) {
 				 	$row = mysqli_fetch_array($log);
-					$_SESSION["nombre"] = $row['nombre']; 
-					
+					$_SESSION["Username"] = $row['Username'];
+
 					header("Location:../principal/");
 					
 				}
@@ -28,6 +28,6 @@
 					echo '<script> window.location="../login/"; </script>';
 				}
 			}
-		?>	
+		?>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	include 'Conexion.php';
-	if(isset($_SESSION['nombre'])){
+	if(isset($_SESSION['Username'])){
 	echo '<script> window.location="../principal/"; </script>';
 	}
 ?>
@@ -12,21 +12,21 @@
 	<meta charset="utf-8">
 
 	<style>
-		
+
 		.orientacion{
 			margin: 150px;
 			padding-left: 400px;
-        
+
 		}
 
 		.redondeado {
 			border-radius: 5px;
 		}
-		
+
 		.espacioInput{
-			
+
 			padding-left: 15px;
-        
+
 		}
 
 
@@ -37,7 +37,7 @@
 		<div class = "">
 			<h1>Inicio de sesion</h1>
 			<br>
-			
+
 			<div class = "espacioInput">
 			<form method="post" action= "../validar/">
 				<input type="text" class="form-control redondeado" name="user" autocomplete="off" required><br><br>
