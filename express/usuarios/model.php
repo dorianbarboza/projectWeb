@@ -5,11 +5,16 @@ require_once('../core/db_abstract_model.php');
 
 class Usuario extends DBAbstractModel {
 ############################### PROPIEDADES ################################
-    public $nombre;
-    public $apellido;
-    public $email;
-    private $clave;
-    protected $id;
+    public $Username;
+    public $Password;
+    public $Correo;
+    public $Telefono;
+    public $Nombre;
+    public $Apellidos;
+    public $FechaNacimiento;
+    public $Ciudad;
+    public $Sexo;
+    protected $ID_Cliente;
 
     ################################# MÉTODOS ################################## # Traer datos de un usuario
     public function get($user_email = '') {
@@ -41,13 +46,18 @@ class Usuario extends DBAbstractModel {
     # Crear un nuevo usuario
     public function set($user_data = array())
     {
-     
+
         $json = json_encode (
             array(
-                'nombre' => $user_data['nombre'],
-                'correo' => $user_data['correo'],
-                'sexo' => $user_data['sexo'],
-                'fechaNacimiento' => $user_data['fechaNacimiento']
+                'Username' => $user_data['Username'],
+                'Password' => $user_data['Password'],
+                'Correo' => $user_data['Correo'],
+                'Telefono' => $user_data['Telefono'],
+                'Nombre' => $user_data['Nombre'],
+                'Apellidos' => $user_data['Apellidos'],
+                'FechaNacimiento' => $user_data['FechaNacimiento'],
+                'Ciudad' => $user_data['Ciudad'],
+                'Sexo' => $user_data['Sexo']
             )
          );
 
@@ -60,7 +70,7 @@ class Usuario extends DBAbstractModel {
             )
             );
 
-        $url = "http://localhost/api.peopleapp.com/api.mvc/usuario/insertarUsuario/";
+        $url = "http://localhost/projectWeb/api.mvc/Cliente/insertarCliente";
 
 
         $context=stream_context_create($opciones);
@@ -69,17 +79,19 @@ class Usuario extends DBAbstractModel {
         // echo $mensaje->datos;
     }
 
-
+/**
+**     AQUI TODAVIA----------------------------------------------------
+*/
 
 
     # Modificar un usuario
     public function edit($user_data = array())
     {
-    
+
         $json = json_encode (
             array(
                 'idUsuario'=> $user_data['idUsuario'],
-                'nombre' => $user_data['nombre'], 
+                'nombre' => $user_data['nombre'],
                 'correo' => $user_data['correo'],
                 'sexo' => $user_data['sexo'],
                 'fechaNacimiento' => $user_data['fechaNacimiento']
@@ -110,13 +122,13 @@ class Usuario extends DBAbstractModel {
      # Eliminar un usuario
      public function delete($user_data = array())
      {
-     
+
          $json = json_encode (
              array(
                  'idUsuario'=> $user_data['idUsuario']
              )
           );
- 
+
          //echo $json;
           $opciones = array ('http' =>
              array(
@@ -125,10 +137,10 @@ class Usuario extends DBAbstractModel {
                  'content' => $json
              )
              );
- 
+
          $url = "http://localhost/api.peopleapp.com/api.mvc/usuario/eliminarUsuario/";
- 
- 
+
+
          $context=stream_context_create($opciones);
          $data = file_get_contents($url,false,$context);
          $mensaje = json_decode($data);

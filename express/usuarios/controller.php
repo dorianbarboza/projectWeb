@@ -12,7 +12,7 @@ function handler()
         VIEW_SET_USER, VIEW_GET_USER, VIEW_DELETE_USER,
         VIEW_EDIT_USER,VIEW_LOGIN_USER,VIEW_FORMULARIO_USER,
         VIEW_FORMULARIO_PRINCIPAL,ADD_USER,FORMULARIO_CERRAR_SESION,
-        FORMULARIO_VALIDAR, FORMULARIO_EDITAR, FORMULARIO_ELIMINAR, DELETE_USER, FORMULARIO_LOGINN);
+        FORMULARIO_VALIDAR, FORMULARIO_EDITAR, FORMULARIO_ELIMINAR, DELETE_USER, FORMULARIO_LOGINN, VIEW_HOME);
 
     foreach ($peticiones as $peticion) {
         $uri_peticion = MODULO . $peticion . '/';
@@ -81,24 +81,40 @@ function set_obj() {
 function helper_user_data(){
     $user_data = array();
     if ($_POST) {
-        if (array_key_exists('idUsuario', $_POST)) {
-            $user_data['idUsuario'] = $_POST['idUsuario'];
+        if (array_key_exists('ID_Cliente', $_POST)) {
+            $user_data['ID_Cliente'] = $_POST['ID_Cliente'];
         }
-        if (array_key_exists('nombre', $_POST)) {
-            $user_data['nombre'] = $_POST['nombre'];
+        if (array_key_exists('Username', $_POST)) {
+            $user_data['Username'] = $_POST['Username'];
         }
-        if (array_key_exists('contrasena', $_POST)) {
-            $user_data['contrasena'] = $_POST['contrasena'];
+        if (array_key_exists('Password', $_POST)) {
+            $user_data['Password'] = $_POST['Password'];
         }
-        if (array_key_exists('correo', $_POST)) {
-            $user_data['correo'] = $_POST['correo'];
+        if (array_key_exists('Correo', $_POST)) {
+            $user_data['Correo'] = $_POST['Correo'];
         }
-        if (array_key_exists('sexo', $_POST)) {
-            $user_data['sexo'] = $_POST['sexo'];
+        if (array_key_exists('Telefono', $_POST)) {
+            $user_data['Telefono'] = $_POST['Telefono'];
         }
 
-        if (array_key_exists('fechaNacimiento', $_POST)) {
-            $user_data['fechaNacimiento'] = $_POST['fechaNacimiento'];
+        if (array_key_exists('Nombre', $_POST)) {
+            $user_data['Nombre'] = $_POST['Nombre'];
+        }
+
+        if (array_key_exists('Apellidos', $_POST)) {
+            $user_data['Apellidos'] = $_POST['Apellidos'];
+        }
+
+        if (array_key_exists('FechaNacimiento', $_POST)) {
+            $user_data['FechaNacimiento'] = $_POST['FechaNacimiento'];
+        }
+
+        if (array_key_exists('Ciudad', $_POST)) {
+            $user_data['Ciudad'] = $_POST['Ciudad'];
+        }
+
+        if (array_key_exists('Sexo', $_POST)) {
+            $user_data['Sexo'] = $_POST['Sexo'];
         }
     }
     return $user_data;

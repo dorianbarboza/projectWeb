@@ -14,7 +14,7 @@
             .general{
             width: 500px;
             height: 500px;
-            
+
             margin: auto;
             padding: 30px;
             }
@@ -30,7 +30,7 @@
                 font-size:16px;
                 padding:0 10px;
                 background:#fff;
-            
+
                 box-shadow: 0 1px 5px rgba(4, 129, 177, 0.5);
                 padding:5px 10px;
                 text-transform:uppercase;
@@ -39,7 +39,7 @@
             }
             fieldset {
                 border-radius:4px;
-            
+
                 padding:20px;
                 border-color:rgba(4, 129, 177, 0.4);
             }
@@ -47,7 +47,7 @@
             textarea {
                 color: #373737;
                 background: #fff;
-            
+
                 font-size: 14px;
                 line-height: 1.2em;
                 margin-bottom:15px;
@@ -99,26 +99,30 @@
 <h2 class = "centro">Registro de Usuarios</h2>
 
 <div class = "general">
-<form name="nombre_formulario" method="POST" action="/api.peopleapp.com/express/usuarios/adduser/">
-    
+<form name="nombre_formulario" method="POST" action="/projectWeb/express/usuarios/adduser/">
+
     <fieldset>
-           
+
             <div>
-                <input type="text" name="nombre" autocomplete="off" placeholder="Nombre">
+                <input type="text" name="Username" autocomplete="off" placeholder="Usuario">
             </div>
             <div>
-                <input type="email" name="correo" autocomplete="off" placeholder="Correo"/>
+                <input type="text" name="Password" autocomplete="off" placeholder="Contraseña"/>
             </div>
             <div>
-                <input type="text" name="sexo" autocomplete="off" placeholder="Sexo"/>
+                <input type="text" name="Nombre" autocomplete="off" placeholder="Nombre"/>
             </div>
-           
+
             <div>
-                <input type="text" name="fechaNacimiento" autocomplete="off" placeholder="Fecha de nacimiento"/>
+                <input type="text" name="Apellidos" autocomplete="off" placeholder="Apellidos"/>
+            </div>
+
+            <div>
+                <input type="text" name="Correo" autocomplete="off" placeholder="Correo"/>
             </div>
             <input type="submit" name="submit" value="Guardar"/>
-        </fieldset>  
-   
-</form>    
+        </fieldset>
+
+</form>
 </body>
 </html>

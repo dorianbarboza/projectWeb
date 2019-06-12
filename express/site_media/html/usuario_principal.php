@@ -5,7 +5,8 @@
         session_start();
         include 'Conexion.php';
 
-        if(isset($_SESSION['Username'])) {?>
+        if(isset($_SESSION['Username'])) {
+          ?>
 
 <!DOCTYPE html>
 <html>

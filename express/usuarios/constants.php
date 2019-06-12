@@ -23,6 +23,7 @@
     const FORMULARIO_EDITAR = "editar";
     const FORMULARIO_ELIMINAR = "eliminar";
     const FORMULARIO_LOGINN = "loginn";
+    const VIEW_HOME = "home";
 
 
 
