@@ -21,11 +21,11 @@
 					$_SESSION["Username"] = $row['Username'];
 
 					header("Location:../principal/");
-					
+
 				}
 				else{
 					echo '<script> alert("Usuario o contraseña incorrectos.");</script>';
-					echo '<script> window.location="../login/"; </script>';
+					echo '<script> window.location="../loginn/"; </script>';
 				}
 			}
 		?>

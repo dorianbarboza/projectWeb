@@ -37,8 +37,8 @@
         }
       }
 
-      /*css*/
-      html,
+			/*css*/
+			html,
 body {
   height: 100%;
 }
@@ -85,14 +85,23 @@ body {
     </style>
     <!-- Custom styles for this template -->
     <link href="signin.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   </head>
   <body class="text-center">
-    <form method="post" action= "../validar/">
-      <input type="text" class="form-control redondeado" name="user" autocomplete="off" required><br><br>
-      <input type="password" class="form-control redondeado" name="pw" autocomplete="off" required><br><br>
-      <input type="submit" class="btn btn-success" name="login" value="Entrar">
-    </form>
+    <form method="post" action= "../validar/" class="form-signin">
+  <img class="mb-4" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+  <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+  <label for="inputEmail" class="sr-only">Email address</label>
+  <input id="inputEmail" class="form-control" type="text" class="form-control redondeado" name="user" autocomplete="off" required autofocus>
+  <label for="inputPassword" class="sr-only">Password</label>
+  <input type="password" id="inputPassword" class="form-control" name="pw" autocomplete="off" required>
+  <div class="checkbox mb-3">
+    <label>
+      <input type="checkbox" value="remember-me"> Remember me
+    </label>
+  </div>
+  <button class="btn btn-lg btn-primary btn-block" type="submit" name="login" value="Entrar">Sign in</button>
+  <p class="mt-5 mb-3 text-muted">&copy; 2017-2019</p>
 </form>
 </body>
 </html>

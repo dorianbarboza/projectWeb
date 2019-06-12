@@ -7,19 +7,19 @@ function handler()
 {
     $event = VIEW_LOGIN_USER;
     $uri = $_SERVER['REQUEST_URI'];
-    
+
     $peticiones = array(GET_USER, EDIT_USER,
         VIEW_SET_USER, VIEW_GET_USER, VIEW_DELETE_USER,
         VIEW_EDIT_USER,VIEW_LOGIN_USER,VIEW_FORMULARIO_USER,
-        VIEW_FORMULARIO_PRINCIPAL,ADD_USER,FORMULARIO_CERRAR_SESION, 
-        FORMULARIO_VALIDAR, FORMULARIO_EDITAR, FORMULARIO_ELIMINAR, DELETE_USER);
-    
+        VIEW_FORMULARIO_PRINCIPAL,ADD_USER,FORMULARIO_CERRAR_SESION,
+        FORMULARIO_VALIDAR, FORMULARIO_EDITAR, FORMULARIO_ELIMINAR, DELETE_USER, FORMULARIO_LOGINN);
+
     foreach ($peticiones as $peticion) {
         $uri_peticion = MODULO . $peticion . '/';
-       
+
         if (strpos($uri, $uri_peticion) == true) {
             $event = $peticion;
-           
+
         }
     }
 
@@ -45,11 +45,11 @@ function handler()
             $resultado = $usuario->delete($user_data);
             retornar_vista(VIEW_FORMULARIO_PRINCIPAL);
         break;
-        
-        
-        
-        
-        
+
+
+
+
+
         case GET_USER:
             $usuario->get($user_data);
             $data = array(
@@ -100,7 +100,7 @@ function helper_user_data(){
         if (array_key_exists('fechaNacimiento', $_POST)) {
             $user_data['fechaNacimiento'] = $_POST['fechaNacimiento'];
         }
-    } 
+    }
     return $user_data;
 }
 

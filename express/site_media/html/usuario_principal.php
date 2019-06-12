@@ -219,6 +219,6 @@ header{
 </html>
 <?php
 }else{
-	header("Location:../login/");
+	header("Location:../loginn/");
 }
 ?>

@@ -6,7 +6,7 @@
     const DELETE_USER = 'delete';
     const EDIT_USER = 'edit';
     const ADD_USER='adduser';
-   
+
 
     # vistas
     const VIEW_SET_USER = 'agregar';
@@ -22,9 +22,10 @@
     const FORMULARIO_CERRAR_SESION = "cerrarsesion";
     const FORMULARIO_EDITAR = "editar";
     const FORMULARIO_ELIMINAR = "eliminar";
-    
-    
-    
-    
-    
+    const FORMULARIO_LOGINN = "loginn";
+
+
+
+
+
 ?>
