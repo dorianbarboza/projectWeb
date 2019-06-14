@@ -5,7 +5,9 @@
 
         public function __construct() { }
 
-// GET
+        /************
+          GET Repartidor
+        *************/
 
         public function obtenerRepartidores(){
             $this->query="SELECT * FROM Repartidor";
@@ -19,7 +21,9 @@
             }
         }
 
-    // POST INSERT
+        /************************
+          POST INSER Repartidor
+        *************************/
 
         function agregarRepartidor($array){
             if(!empty($array)){
@@ -48,6 +52,10 @@
             }
     }
 
+    /*************************
+      POST UPDATE Repartidor
+    *************************/
+
     function actualizarRepartidor($array){
       if(!empty($array)){
         $consulta = "UPDATE Repartidor
@@ -74,6 +82,9 @@
       }
     }
 
+    /*************************
+      POST DELETE Repartidor
+    *************************/
 
     function eliminarRepartidor($array){
         if(!empty($array)){

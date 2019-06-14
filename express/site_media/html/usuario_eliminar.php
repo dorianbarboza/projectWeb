@@ -14,7 +14,7 @@
             .general{
             width: 500px;
             height: 500px;
-            
+
             margin: auto;
             padding: 30px;
             }
@@ -30,7 +30,7 @@
                 font-size:16px;
                 padding:0 10px;
                 background:#fff;
-            
+
                 box-shadow: 0 1px 5px rgba(4, 129, 177, 0.5);
                 padding:5px 10px;
                 text-transform:uppercase;
@@ -39,7 +39,7 @@
             }
             fieldset {
                 border-radius:4px;
-            
+
                 padding:20px;
                 border-color:rgba(4, 129, 177, 0.4);
             }
@@ -47,7 +47,7 @@
             textarea {
                 color: #373737;
                 background: #fff;
-            
+
                 font-size: 14px;
                 line-height: 1.2em;
                 margin-bottom:15px;
@@ -96,14 +96,14 @@
 </head>
 <body>
     <div class = "general">
-        <form  method="POST" action="/api.peopleapp.com/express/usuarios/delete/">
+        <form  method="POST" action="/projectWeb/express/usuarios/delete/">
         <fieldset>
                     <div>
-                        <input type="text" name="idUsuario" autocomplete="off" placeholder="Id usuario"/>
-                    </div> 
+                        <input type="text" name="ID_Cliente" autocomplete="off" placeholder="ID"/>
+                    </div>
 
                     <input type="submit" name="submit" value="Guardar"/>
-                </fieldset>  
+                </fieldset>
 
         </form>
     </div>

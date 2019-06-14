@@ -5,7 +5,9 @@
 
         public function __construct() { }
 
-// GET
+        /************************
+          GET VehiculoRepartidor
+        *************************/
 
         public function obtenerVehiculos(){
             $this->query="SELECT * FROM VehiculoRepartidor";
@@ -19,7 +21,9 @@
             }
         }
 
-    // POST INSERT
+        /********************************
+          POST INSERT VehiculoRepartidor
+        *********************************/
 
         function agregarVehiculo($array){
             if(!empty($array)){
@@ -49,6 +53,10 @@
             }
     }
 
+    /********************************
+      POST UPDATE VehiculoRepartidor
+    *********************************/
+
     function actualizarVehiculo($array){
       if(!empty($array)){
         $consulta = "UPDATE VehiculoRepartidor
@@ -75,6 +83,10 @@
         ];
       }
     }
+
+    /********************************
+      POST DELETE VehiculoRepartidor
+    *********************************/
 
 
     function eliminarVehiculo($array){

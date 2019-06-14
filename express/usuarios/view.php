@@ -29,7 +29,7 @@ $diccionario = array(
     function get_template($form='get') {
         ob_start();
         include ( '../site_media/html/usuario_'.$form.'.php');
-    
+
         return ob_get_clean();
     }
 
@@ -41,12 +41,10 @@ $diccionario = array(
     }
 
     function retornar_vista($vista, $data=array()) {
-       
+
         $html = get_template($vista);
-        
+
 
         print $html;
     }
 ?>
-
-

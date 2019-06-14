@@ -10,6 +10,7 @@ require 'controladores/Usuario.php';
 require 'controladores/Repartidor.php';
 require 'controladores/VehiculoRepartidor.php';
 require 'controladores/Cliente.php';
+require 'controladores/ServicioReparto.php';
 //require 'controladores/hugo.php';
  //require 'usuarios/model.php';
 //require 'usuarios/view.php';
@@ -46,7 +47,7 @@ $recurso = array_shift($peticion);//
 
 //echo $recurso;
 
-$recursos_existentes = array('contacto', 'usuario','Repartidor','VehiculoRepartidor','Usuario','Cliente','solicitud', 'actualizar'); //Se ponen en singular
+$recursos_existentes = array('contacto', 'usuario','Repartidor','VehiculoRepartidor','Usuario','Cliente','solicitud', 'actualizar','ServicioReparto'); //Se ponen en singular
 
 
 // Comprobar si existe el recurso

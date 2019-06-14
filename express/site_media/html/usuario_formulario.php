@@ -124,5 +124,8 @@
         </fieldset>
 
 </form>
+<div class="return">
+<a href="../home/">Regresar</a>
+</div>
 </body>
 </html>

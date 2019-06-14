@@ -62,8 +62,13 @@ VALUES ('','David','Poot','david@gmail.com','Hombre','05-Diciembre-1991');
 /* Llave Foranea ID_VehiculoRepartidor */
 ALTER TABLE Repartidor
 Add ID_VehiculoRepartidor int,
-ADD FOREIGN KEY (ID_VehiculoRepartidor) 
+ADD FOREIGN KEY (ID_VehiculoRepartidor)
 REFERENCES VehiculoRepartidor (ID_VehiculoRepartidor);
+/* FK ID_EstadoRepartidor */
+ALTER TABLE Repartidor
+Add ID_EstadoRepartidor varchar(30),
+ADD FOREIGN KEY (ID_EstadoRepartidor)
+REFERENCES EstadoRepartidor (ID_EstadoRepartidor);
 
 /* Tabla VehiculoRepartidor */
 
@@ -85,3 +90,38 @@ VALUES ('','Motocicleta','Honda','XX20','2019','Negro','RGR-443');
 
 INSERT INTO VehiculoRepartidor (ID_VehiculoRepartidor, Tipo, Marca, Modelo, Anio, Color, Placa)
 VALUES ('','Motocicleta','Suzuki','S200','2018','Blanca','DFS-117');
+
+/* Tabla Servicio Reparto */
+CREATE TABLE ServicioReparto(
+ID_ServicioReparto int primary key AUTO_INCREMENT,
+DireccionProducto varchar(100),
+DireccionDestino varchar(100),
+FechaServicio varchar(30),
+HoraServicio varchar(30),
+CostoTotal int,
+CostoComision int
+);
+
+/* FK ID_Cliente */
+ALTER TABLE ServicioReparto
+Add ID_Cliente int,
+ADD FOREIGN KEY (ID_Cliente)
+REFERENCES Cliente (ID_Cliente);
+/* FK ID_Repartidor */
+ALTER TABLE ServicioReparto
+Add ID_Repartidor int,
+ADD FOREIGN KEY (ID_Repartidor)
+REFERENCES Repartidor (ID_Repartidor);
+
+/* Tabla Estado Repartidor */
+CREATE TABLE EstadoRepartidor(
+ID_EstadoRepartidor varchar(30) primary key not null,
+Estado varchar(30)
+);
+
+
+INSERT INTO EstadoRepartidor (ID_EstadoRepartidor, Estado)
+VALUES ('ED', 'Disponible');
+
+INSERT INTO EstadoRepartidor (ID_EstadoRepartidor, Estado)
+VALUES ('EO', 'Ocupado');

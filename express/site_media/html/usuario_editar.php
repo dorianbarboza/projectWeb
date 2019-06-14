@@ -94,6 +94,14 @@
                 color:#999898;
                 margin-bottom:3px;
             }
+            .return{
+              background-color: #fafafa;
+  margin: 1rem;
+  padding: 1rem;
+  border: 2px solid #ccc;
+  /* IMPORTANTE */
+  text-align: center;
+            }
     </style>
 </head>
 <body>
@@ -103,6 +111,14 @@
             <fieldset>
                     <div>
                         <input type="text" name="ID_Cliente" autocomplete="off" placeholder="ID"/>
+                    </div>
+
+                    <div>
+                        <input type="text" name="Username"  autocomplete="off" placeholder="Usuario"/>
+                    </div>
+
+                    <div>
+                        <input type="text" name="Password" autocomplete="off" placeholder="Contraseña"/>
                     </div>
                     <div>
                         <input type="text" name="Correo"  autocomplete="off" placeholder="Correo"/>
@@ -144,6 +160,9 @@
                 ?>
          -->
         </form>
+        <div class="return">
+        <a href="../home/">Regresar</a>
+      </div>
     </div>
 </body>
 </html>

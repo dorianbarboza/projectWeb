@@ -2,12 +2,13 @@
 /* Modificar */
     require 'modelos/VehiculoRepartidorModel.php';
     class VehiculoRepartidor{
-        private $vehiculoRepartModel;
+        private $servicioRepartoModel;
 
         public function __construct() { }
 
          // GET
-        // URL: http://localhost/SistemaApi/api.mvc/VehiculoRepartidor/obtenerVehiculos/
+
+        // URL: http://localhost/projectWeb/api.mvc/VehiculoRepartidor/obtenerVehiculos/
 
         public function get($parametros){
           //echo var_dump($parametros);
@@ -26,8 +27,9 @@
           }
         }
 
-        // POST
-        // URL: http://localhost/SistemaApi/api.mvc/VehiculoRepartidor/RECURSO/
+
+        // URL: http://localhost/projectWeb/api.mvc/VehiculoRepartidor/RECURSO/
+
 
         public function post($parametros){
           $this->vehiculoRepartModel = new VehiculoRepartidorModel();

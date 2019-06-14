@@ -6,9 +6,10 @@
 
         }
 
-        /*
-        Método para devuelve registros de usuarios
-        */
+        /************************
+          GET Usuarios
+        *************************/
+        
         public function obtenerUsuarios(){
             $this->query="SELECT * FROM usuario";
             $this->get_results_from_query();

@@ -6,9 +6,9 @@
 
         }
 
-        /*
-        Método para devuelve registros de usuarios
-        */
+        /************
+          GET Cliente
+        *************/
         public function getCliente(){
             $this->query="SELECT * FROM Cliente";
             $this->get_results_from_query();
@@ -21,7 +21,9 @@
             }
         }
 
-        // POST INSERT
+        /********************
+          POST INSERT Cliente
+        *********************/
 
             function agregarCliente($array){
                 if(!empty($array)){
@@ -54,6 +56,10 @@
                 }
         }
 
+        /********************
+          POST UPDATE Cliente
+        *********************/
+
         function actualizarCliente($array){
           if(!empty($array)){
             $consulta = "UPDATE Cliente
@@ -82,6 +88,32 @@
               "error"=>"Error en el JSON2"
             ];
           }
+        }
+
+        /********************
+          POST DELETE Cliente
+        *********************/
+
+        function eliminarCliente($array){
+            if(!empty($array)){
+                $consulta = "DELETE FROM `Cliente`
+                WHERE Cliente.ID_Cliente = $array->ID_Cliente";
+            }
+
+               //echo $consulta;
+               $this->query = $consulta;
+               // Ejecutar sentencia preparada
+               $result = $this->execute_single_query();
+               if ($result['mensaje'] == "Registrado"){
+                       return [
+                           "datos" =>"Registro eliminado"
+                       ];
+
+               }else{
+                   return [
+                       "error"=>"Error en el JSON2"
+                   ];
+               }
         }
 
 

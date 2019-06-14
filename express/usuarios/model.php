@@ -79,9 +79,7 @@ class Usuario extends DBAbstractModel {
         // echo $mensaje->datos;
     }
 
-/**
-**     AQUI TODAVIA----------------------------------------------------
-*/
+
 
 
     # Modificar un usuario
@@ -129,11 +127,10 @@ class Usuario extends DBAbstractModel {
 
          $json = json_encode (
              array(
-                 'idUsuario'=> $user_data['idUsuario']
+                 'ID_Cliente'=> $user_data['ID_Cliente']
              )
           );
 
-         //echo $json;
           $opciones = array ('http' =>
              array(
                  'method' => 'POST',
@@ -142,13 +139,47 @@ class Usuario extends DBAbstractModel {
              )
              );
 
-         $url = "http://localhost/api.peopleapp.com/api.mvc/usuario/eliminarUsuario/";
+         $url = "http://localhost/projectWeb/api.mvc/Cliente/eliminarCliente";
 
 
          $context=stream_context_create($opciones);
          $data = file_get_contents($url,false,$context);
          $mensaje = json_decode($data);
         //  return $mensaje->datos;
+     }
+
+
+     /* Tabla Servicio Reparto */
+     public function setServicio($servicio_data = array())
+     {
+
+         $json = json_encode (
+             array(
+                 'DireccionProducto' => $servicio_data['DireccionProducto'],
+                 'DireccionDestino' => $servicio_data['DireccionDestino'],
+                 'FechaServicio' => $servicio_data['FechaServicio'],
+                 'HoraServicio' => $servicio_data['HoraServicio'],
+                 'CostoTotal' => $servicio_data['DireccionDestino']
+             )
+          );
+
+          echo $json;
+          $opciones = array ('http' =>
+             array(
+                 'method' => 'POST',
+                 'header' => 'Content-Type: application/json; charset=utf8',
+                 'content' => $json
+             )
+             );
+
+         $url = "http://localhost/projectWeb/api.mvc/ServicioReparto/insertarServicioReparto/";
+
+
+
+         $context=stream_context_create($opciones);
+         $data = file_get_contents($url,false,$context);
+         $mensaje = json_decode($data);
+         // echo $mensaje->datos;
      }
 
 

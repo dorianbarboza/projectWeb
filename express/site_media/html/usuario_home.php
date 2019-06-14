@@ -167,7 +167,7 @@ body {
 
 
         <div class="my-3 p-3 bg-white rounded shadow-sm">
-          <h6 class="border-bottom border-gray pb-2 mb-0">PARTE 1</h6>
+          <h4 class="border-bottom border-gray pb-2 mb-0">Mi cuenta</h4>
           <div class="media text-muted pt-3">
             <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"/><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
             <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
@@ -178,15 +178,15 @@ body {
           <div class="media text-muted pt-3">
             <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect width="100%" height="100%" fill="#e83e8c"/><text x="50%" y="50%" fill="#e83e8c" dy=".3em">32x32</text></svg>
             <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-              <strong class="d-block text-gray-dark">Ver mi perfil</strong>
-              <a href="../perfil/">Ver</a>
+              <strong class="d-block text-gray-dark">Confirmar mi cuenta por correo</strong>
+              <a href="../correo/">Confirmacion</a>
             </p>
           </div>
           <div class="media text-muted pt-3">
             <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect width="100%" height="100%" fill="#6f42c1"/><text x="50%" y="50%" fill="#6f42c1" dy=".3em">32x32</text></svg>
             <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-              <strong class="d-block text-gray-dark">...</strong>
-              ...
+              <strong class="d-block text-gray-dark">Eliminar mi cuenta</strong>
+              <a href="../eliminar/">Eliminar</a>
             </p>
           </div>
           <small class="d-block text-right mt-3">
@@ -194,23 +194,22 @@ body {
         </div>
 
         <div class="my-3 p-3 bg-white rounded shadow-sm">
-          <h6 class="border-bottom border-gray pb-2 mb-0">PAPRTE 2</h6>
+          <h6 class="border-bottom border-gray pb-2 mb-0">Servicio Reparto</h6>
           <div class="media text-muted pt-3">
             <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"/><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
             <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
               <div class="d-flex justify-content-between align-items-center w-100">
-                <strong class="text-gray-dark">Full Name</strong>
-                <a href="#">Follow</a>
+                <strong class="text-gray-dark">Solicitar Servicio</strong>
+                <a href="../servicio/">Pedir</a>
               </div>
-              <span class="d-block">@username</span>
             </div>
           </div>
           <div class="media text-muted pt-3">
             <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"/><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
             <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
               <div class="d-flex justify-content-between align-items-center w-100">
-                <strong class="text-gray-dark">Full Name</strong>
-                <a href="#">Follow</a>
+                <strong class="text-gray-dark">Reporte</strong>
+                <a href="../../../reportes/ms_access/ex.php/">Reporte</a>
               </div>
               <span class="d-block">@username</span>
             </div>
