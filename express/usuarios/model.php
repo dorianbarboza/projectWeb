@@ -163,7 +163,7 @@ class Usuario extends DBAbstractModel {
              )
           );
 
-          echo $json;
+          //echo $json;
           $opciones = array ('http' =>
              array(
                  'method' => 'POST',

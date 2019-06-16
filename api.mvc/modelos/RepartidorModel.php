@@ -42,7 +42,7 @@
             $result = $this->execute_single_query();
                 if ($result['mensaje'] == "Registrado"){
                     return [
-                        "datos" =>"Se ha registrado al repartidor"
+                        "datos" =>"Se ha registrado"
                     ];
 
             }else{

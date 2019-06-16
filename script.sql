@@ -125,3 +125,16 @@ VALUES ('ED', 'Disponible');
 
 INSERT INTO EstadoRepartidor (ID_EstadoRepartidor, Estado)
 VALUES ('EO', 'Ocupado');
+
+CREATE TABLE Cliente(
+ID_Cliente int primary key auto_increment,
+Username varchar(30),
+Password varchar(30),
+Correo varchar(30),
+Telefono int,
+Nombre varchar(30),
+Apellidos varchar(30),
+FechaNacimiento varchar(30),
+Ciudad varchar(30),
+Sexo varchar(30)
+);

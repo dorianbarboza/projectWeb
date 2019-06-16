@@ -42,6 +42,10 @@ public function post($parametros){
     return $this->servReparModel->actualizarServicioReparto($array);
     break;
 
+    case 'eliminarServicioReparto':
+    return $this->servReparModel->eliminarServicioReparto($array);
+    break;
+
     default:
     echo 'Error';
     break;
