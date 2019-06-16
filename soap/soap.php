@@ -1,7 +1,7 @@
 <?php
-include_once('modelos/usuariom.php');
+include_once('modelos/ClienteModelo.php');
 
-    $params = array('uri' => "http://localhost/soap/soap.php");
+    $params = array('uri' => "projectWeb/soap/modelos/soap.php");
     $soap = new SoapServer(NULL, $params);
-    $soap->setClass("UsuarioM");
+    $soap->setClass("ClienteModelo");
     $soap->handle();
