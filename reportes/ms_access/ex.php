@@ -12,7 +12,7 @@ $sql='SELECT Cliente.Username, Repartidor.Nombre, ServicioReparto.ID_ServicioRep
 FROM ServicioReparto, Cliente, Repartidor
 WHERE ServicioReparto.ID_Cliente = Cliente.ID_Cliente
 AND ServicioReparto.ID_Repartidor = Repartidor.ID_Repartidor';
-$col=array('Cliente'=>20, 'Repartidor'=>40, 'Servicio'=>40,'Fecha'=>60, 'Total'=>60);
+$col=array('Cliente'=>40, 'Repartidor'=>40, 'Servicio'=>40,'Fecha'=>60);
 $pdf->Table($sql,$col);
 $pdf->Output();
 ?>
