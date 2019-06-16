@@ -20,7 +20,7 @@ echo "<script>alert('Los campos marcados con * son obligatorios');location.href 
     $mail = new PHPMailer();
     $mail->From     = $Email;
     $mail->FromName = $Nombre;
-    $mail->AddAddress("dorianbarboza@gmail.com"); // Dirección a la que llegaran los mensajes.
+    $mail->AddAddress("CORREO_DE"); // Dirección a la que llegaran los mensajes.
 // Aquí van los datos que apareceran en el correo que reciba
     $mail->WordWrap = 50;
     $mail->IsHTML(true);
@@ -32,8 +32,8 @@ echo "<script>alert('Los campos marcados con * son obligatorios');location.href 
     $mail->IsSMTP();
     $mail->Host = "ssl://smtp.gmail.com:465";  // Servidor de Salida. 465 es uno de los puertos que usa Google para su servidor SMTP
     $mail->SMTPAuth = true;
-    $mail->Username = "dorianbarboza@gmail.com";  // Correo Electrónico
-    $mail->Password = "dabv-18101996"; // Contraseña del correo
+    $mail->Username = "CORREO_DE";  // Correo Electrónico
+    $mail->Password = "PASSWORD"; // Contraseña del correo
     if ($mail->Send())
     echo "<script>alert('Sugerencia enviada exitosamente');location.href ='javascript:history.back()';</script>";
 
